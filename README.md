@@ -1,4 +1,4 @@
-# **Plugin Name** Plugin
+# **Discourse Open Graph** Plugin
 
 **Plugin Summary**
 

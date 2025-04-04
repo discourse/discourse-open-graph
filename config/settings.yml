@@ -1,4 +1,4 @@
-TODO_plugin_name:
-  plugin_name_enabled:
+discourse_open_graph:
+  discourse_open_graph_enabled:
     default: false
     client: true
