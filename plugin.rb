@@ -22,7 +22,7 @@ after_initialize do
     url = opts[:url]
     override = overrides.find_by_url(url)
     if override
-      content = override[property] if override[property] # it can be either :title or :description 
+      content = override[property] if override[property] # it can be either :title or :description
     end
     content
   end
