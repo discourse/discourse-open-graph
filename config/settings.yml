@@ -2,3 +2,8 @@ discourse_open_graph:
   discourse_open_graph_enabled:
     default: false
     client: true
+  open_graph_overrides:
+    client: false
+    default: >-
+      []
+    json_schema: DiscourseOpenGraph::SiteSettings::OpenGraphOverrideJsonSchema
