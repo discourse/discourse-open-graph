@@ -26,8 +26,8 @@ RSpec.describe DiscourseOpenGraph::OpenGraphOverrides do
       url = "/c/official-category"
       override = overrides.find_by_url(url)
       expect(override).to be_present
-      expect(override[:title]).to eq("This is the official category")
-      expect(override[:description]).to eq("This is the official category")
+      expect(override[:title]).to eq("This is official")
+      expect(override[:description]).to eq("This is official")
     end
 
     it "returns nil if no override is found" do
