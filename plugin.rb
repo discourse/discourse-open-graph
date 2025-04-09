@@ -19,6 +19,7 @@ require_relative "lib/discourse_open_graph/engine"
 after_initialize do
   overrides = DiscourseOpenGraph::OpenGraphOverrides.new
   register_modifier(:meta_data_content) do |content, property, opts|
+    next content if property == :url # we don't want to override the url
     url = opts[:url]
     override = overrides.find_by_url(url)
     if override
