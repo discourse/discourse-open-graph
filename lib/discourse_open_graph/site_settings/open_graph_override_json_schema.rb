@@ -14,19 +14,18 @@ module DiscourseOpenGraph::SiteSettings
           properties: {
             url: {
               type: "string",
-              title: "URL",
-              description:
-                "The URL pattern to match against. This can be a partial URL or a regex pattern. For example: `/c/announcements` or `/c/announcements/.*/`",
+              title: I18n.t("json_schema.url.title"),
+              description: I18n.t("json_schema.url.description"),
             },
             title: {
               type: "string",
-              title: "Title",
-              description: "The title to use for the Open Graph meta tag.",
+              title: I18n.t("json_schema.title.title"),
+              description: I18n.t("json_schema.title.description"),
             },
             description: {
               type: "string",
-              title: "Description",
-              description: "The description to use for the Open Graph meta tag.",
+              title: I18n.t("json_schema.description.title"),
+              description: I18n.t("json_schema.description.description"),
             },
           },
         },
