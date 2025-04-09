@@ -16,7 +16,7 @@ module DiscourseOpenGraph::SiteSettings
               type: "string",
               title: "URL",
               description:
-                "The URL pattern to match against. This can be a partial URL or a regex pattern. For example: `/c/announcements` or `/c/announcements/.*`",
+                "The URL pattern to match against. This can be a partial URL or a regex pattern. For example: `/c/announcements` or `/c/announcements/.*/`",
             },
             title: {
               type: "string",
