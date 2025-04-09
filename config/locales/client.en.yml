@@ -6,4 +6,9 @@ en:
           discourse_open_graph: "Discourse Open Graph"
   js:
     discourse_open_graph:
-      placeholder: placeholder
+      title: "Open Graph"
+      description: "Discourse Open Graph is a plugin that allows you to customize the Open Graph meta tags for your Discourse forum. This can help improve the appearance of your forum when shared on social media platforms."
+      settings:
+        enabled: "Enable Open Graph"
+        title: "Open Graph Title"
+        description: "Open Graph Description"
