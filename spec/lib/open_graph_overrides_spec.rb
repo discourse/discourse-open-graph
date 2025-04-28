@@ -35,5 +35,26 @@ RSpec.describe DiscourseOpenGraph::OpenGraphOverrides do
       override = overrides.find_by_url(url)
       expect(override).to be_nil
     end
+
+    it "finds the correct override in complex cases" do
+      url = "/c/products/{anything}/something-containing-ideas"
+      SiteSettingHelper.add_json(
+        {
+          "url" => "/c/products/[^/]+/[^/]*ideas[^/]*/",
+          "title" => "This is a product idea",
+          "description" => "This is a product idea",
+        },
+      )
+      override = overrides.find_by_url(url)
+      expect(override).to be_present
+      expect(override[:title]).to eq("This is a product idea")
+      expect(override[:description]).to eq("This is a product idea")
+
+      url = "/c/products/something-else/ideas"
+      override = overrides.find_by_url(url)
+      expect(override).to be_present
+      expect(override[:title]).to eq("This is a product idea")
+      expect(override[:description]).to eq("This is a product idea")
+    end
   end
 end
